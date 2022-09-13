@@ -20,7 +20,7 @@ namespace unidad1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            button1.Enabled = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -33,6 +33,11 @@ namespace unidad1
 
         }
 
+        public void comprobacion()
+        {
+            var comprobacion2 = !String.IsNullOrEmpty(Password.Text)&&!String.IsNullOrEmpty(Nombre.Text);
+            button1.Enabled = comprobacion2;
+        }
         public static void usuario(string x, string y)
         {
 
@@ -62,12 +67,12 @@ namespace unidad1
 
         private void Password_TextChanged(object sender, EventArgs e)
         {
-
+            comprobacion();
         }
 
         private void Nombre_TextChanged(object sender, EventArgs e)
         {
-
+            comprobacion();
         }
 
         private void label2_Click(object sender, EventArgs e)
