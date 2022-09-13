@@ -94,6 +94,13 @@ namespace unidad1
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            registrate registrate = new registrate();
+            this.Hide();
+            registrate.Show();
+        }
     }
 
 }
