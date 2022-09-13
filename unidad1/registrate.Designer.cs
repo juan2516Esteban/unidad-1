@@ -34,12 +34,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.Nombre = new System.Windows.Forms.TextBox();
+            this.Nombre_Usuario = new System.Windows.Forms.TextBox();
+            this.Contraseña = new System.Windows.Forms.TextBox();
+            this.Correo = new System.Windows.Forms.TextBox();
+            this.Apellido = new System.Windows.Forms.TextBox();
+            this.confirmar_pass = new System.Windows.Forms.TextBox();
+            this.Guardar_Usuarios = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -96,63 +97,79 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Nombre de usuario";
             // 
-            // textBox1
+            // Nombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(40, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(192, 20);
-            this.textBox1.TabIndex = 6;
+            this.Nombre.Location = new System.Drawing.Point(40, 64);
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Size = new System.Drawing.Size(192, 20);
+            this.Nombre.TabIndex = 6;
+            this.Nombre.TextChanged += new System.EventHandler(this.Nombre_TextChanged);
             // 
-            // textBox2
+            // Nombre_Usuario
             // 
-            this.textBox2.Location = new System.Drawing.Point(40, 271);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(192, 20);
-            this.textBox2.TabIndex = 7;
+            this.Nombre_Usuario.Location = new System.Drawing.Point(40, 271);
+            this.Nombre_Usuario.Name = "Nombre_Usuario";
+            this.Nombre_Usuario.Size = new System.Drawing.Size(192, 20);
+            this.Nombre_Usuario.TabIndex = 7;
+            this.Nombre_Usuario.TextChanged += new System.EventHandler(this.Nombre_Usuario_TextChanged);
             // 
-            // textBox3
+            // Contraseña
             // 
-            this.textBox3.Location = new System.Drawing.Point(40, 339);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(192, 20);
-            this.textBox3.TabIndex = 8;
-            this.textBox3.UseSystemPasswordChar = true;
+            this.Contraseña.Location = new System.Drawing.Point(40, 339);
+            this.Contraseña.Name = "Contraseña";
+            this.Contraseña.PasswordChar = '*';
+            this.Contraseña.Size = new System.Drawing.Size(192, 20);
+            this.Contraseña.TabIndex = 8;
+            this.Contraseña.UseSystemPasswordChar = true;
             // 
-            // textBox4
+            // Correo
             // 
-            this.textBox4.Location = new System.Drawing.Point(40, 204);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(192, 20);
-            this.textBox4.TabIndex = 9;
+            this.Correo.Location = new System.Drawing.Point(40, 204);
+            this.Correo.Name = "Correo";
+            this.Correo.Size = new System.Drawing.Size(192, 20);
+            this.Correo.TabIndex = 9;
+            this.Correo.TextChanged += new System.EventHandler(this.Correo_TextChanged);
             // 
-            // textBox5
+            // Apellido
             // 
-            this.textBox5.Location = new System.Drawing.Point(40, 134);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(192, 20);
-            this.textBox5.TabIndex = 10;
+            this.Apellido.Location = new System.Drawing.Point(40, 134);
+            this.Apellido.Name = "Apellido";
+            this.Apellido.Size = new System.Drawing.Size(192, 20);
+            this.Apellido.TabIndex = 10;
+            this.Apellido.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
-            // textBox6
+            // confirmar_pass
             // 
-            this.textBox6.Location = new System.Drawing.Point(40, 409);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.PasswordChar = '*';
-            this.textBox6.Size = new System.Drawing.Size(192, 20);
-            this.textBox6.TabIndex = 11;
-            this.textBox6.UseSystemPasswordChar = true;
+            this.confirmar_pass.Location = new System.Drawing.Point(40, 409);
+            this.confirmar_pass.Name = "confirmar_pass";
+            this.confirmar_pass.PasswordChar = '*';
+            this.confirmar_pass.Size = new System.Drawing.Size(192, 20);
+            this.confirmar_pass.TabIndex = 11;
+            this.confirmar_pass.UseSystemPasswordChar = true;
+            this.confirmar_pass.TextChanged += new System.EventHandler(this.confirmar_pass_TextChanged);
+            // 
+            // Guardar_Usuarios
+            // 
+            this.Guardar_Usuarios.Location = new System.Drawing.Point(341, 382);
+            this.Guardar_Usuarios.Name = "Guardar_Usuarios";
+            this.Guardar_Usuarios.Size = new System.Drawing.Size(203, 47);
+            this.Guardar_Usuarios.TabIndex = 12;
+            this.Guardar_Usuarios.Text = "registrate";
+            this.Guardar_Usuarios.UseVisualStyleBackColor = true;
+            this.Guardar_Usuarios.Click += new System.EventHandler(this.Guardar_Usuarios_Click);
             // 
             // registrate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Guardar_Usuarios);
+            this.Controls.Add(this.confirmar_pass);
+            this.Controls.Add(this.Apellido);
+            this.Controls.Add(this.Correo);
+            this.Controls.Add(this.Contraseña);
+            this.Controls.Add(this.Nombre_Usuario);
+            this.Controls.Add(this.Nombre);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -175,11 +192,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox Nombre;
+        private System.Windows.Forms.TextBox Nombre_Usuario;
+        private System.Windows.Forms.TextBox Contraseña;
+        private System.Windows.Forms.TextBox Correo;
+        private System.Windows.Forms.TextBox Apellido;
+        private System.Windows.Forms.TextBox confirmar_pass;
+        private System.Windows.Forms.Button Guardar_Usuarios;
     }
 }
