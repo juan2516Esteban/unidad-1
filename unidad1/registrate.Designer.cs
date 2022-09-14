@@ -41,6 +41,7 @@
             this.Apellido = new System.Windows.Forms.TextBox();
             this.confirmar_pass = new System.Windows.Forms.TextBox();
             this.Guardar_Usuarios = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -158,11 +159,25 @@
             this.Guardar_Usuarios.UseVisualStyleBackColor = true;
             this.Guardar_Usuarios.Click += new System.EventHandler(this.Guardar_Usuarios_Click);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.Location = new System.Drawing.Point(399, 339);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(77, 13);
+            this.linkLabel1.TabIndex = 13;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Iniciar Sección";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // registrate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.Guardar_Usuarios);
             this.Controls.Add(this.confirmar_pass);
             this.Controls.Add(this.Apellido);
@@ -199,5 +214,6 @@
         private System.Windows.Forms.TextBox Apellido;
         private System.Windows.Forms.TextBox confirmar_pass;
         private System.Windows.Forms.Button Guardar_Usuarios;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

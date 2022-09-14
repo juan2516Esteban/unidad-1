@@ -54,6 +54,8 @@ namespace unidad1
         }
         private void Guardar_Usuarios_Click(object sender, EventArgs e)
         {
+
+            
             string nombre = Nombre.Text;
             string apellido = Apellido.Text;
             string correo_ = Correo.Text;
@@ -73,7 +75,8 @@ namespace unidad1
                 registrate.Columns.Add("Nombre de usuario", typeof(String));
                 registrate.Columns.Add("Contraseña", typeof(string));
 
-                registrate.Rows.Add(nombre, apellido, correo_, nombre_de_usuario, contraseña);
+                registrate.Rows.Add(new object[] {"juan esteban","salazar","juanesteban.salaza1@gmail.com","papa","2345juan"});
+                registrate.Rows.Add(new object [] {nombre, apellido, correo_, nombre_de_usuario, contraseña});
             }
             else
             {
@@ -85,6 +88,13 @@ namespace unidad1
         private void confirmar_pass_TextChanged(object sender, EventArgs e)
         {
             validar_campo_vacio();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form1 inciar_seccion = new Form1();
+            this.Hide();
+            inciar_seccion.Show();
         }
     }
 }

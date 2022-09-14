@@ -40,7 +40,7 @@ namespace unidad1
         }
         public static void usuario(string x, string y)
         {
-
+            
             string usuario1Name = "juan esteban";
             string usuario1pass = "25162833j";
 
