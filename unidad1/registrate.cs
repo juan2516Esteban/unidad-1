@@ -54,8 +54,6 @@ namespace unidad1
         }
         private void Guardar_Usuarios_Click(object sender, EventArgs e)
         {
-
-            
             string nombre = Nombre.Text;
             string apellido = Apellido.Text;
             string correo_ = Correo.Text;
@@ -95,6 +93,7 @@ namespace unidad1
             Form1 inciar_seccion = new Form1();
             this.Hide();
             inciar_seccion.Show();
+
         }
     }
 }
