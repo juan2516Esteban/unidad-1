@@ -48,12 +48,14 @@ namespace unidad1
         {
             var comprobacion = !String.IsNullOrEmpty(Nombre.Text) && !String.IsNullOrEmpty(Apellido.Text) && !String.IsNullOrEmpty(Correo.Text) && !String.IsNullOrEmpty(Nombre_Usuario.Text) && !string.IsNullOrEmpty(Contraseña.Text) && !String.IsNullOrEmpty(confirmar_pass.Text);
             Guardar_Usuarios.Enabled = comprobacion;
-          
+
 
 
         }
         private void Guardar_Usuarios_Click(object sender, EventArgs e)
         {
+            almacenamiento_de_usuarios usuarios_registro = new almacenamiento_de_usuarios();
+
             string nombre = Nombre.Text;
             string apellido = Apellido.Text;
             string correo_ = Correo.Text;
@@ -65,16 +67,7 @@ namespace unidad1
 
             if (contraseña == confirmar)
             {
-
-                var registrate = new DataTable("usuarios");
-                registrate.Columns.Add("Nombre", typeof(String));
-                registrate.Columns.Add("Apellido", typeof(String));
-                registrate.Columns.Add("Correo Electronico", typeof(String));
-                registrate.Columns.Add("Nombre de usuario", typeof(String));
-                registrate.Columns.Add("Contraseña", typeof(string));
-
-                registrate.Rows.Add(new object[] {"juan esteban","salazar","juanesteban.salaza1@gmail.com","papa","2345juan"});
-                registrate.Rows.Add(new object [] {nombre, apellido, correo_, nombre_de_usuario, contraseña});
+                usuarios_registro.usuarios_data_table(nombre, apellido, correo_, nombre_de_usuario, contraseña);
             }
             else
             {

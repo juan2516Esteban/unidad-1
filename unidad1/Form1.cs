@@ -13,6 +13,7 @@ namespace unidad1
 {
     public partial class Form1 : Form
     {
+       almacenamiento_de_usuarios usuarios_validacion = new almacenamiento_de_usuarios();
         public Form1()
         {
             InitializeComponent();
@@ -40,21 +41,8 @@ namespace unidad1
         }
         public static void usuario(string x, string y)
         {
-            
-            string usuario1Name = "juan esteban";
-            string usuario1pass = "25162833j";
-
-            if (usuario1Name == x && usuario1pass == y)
-            {
-
-                MessageBox.Show("Bienvenido " + x + " Acabas de entrar a esta aplicacion");
-                Form2 form2 = new Form2();
-                form2.Show();
-            }
-            else
-            {
-                MessageBox.Show("El Usuario ingresado no ha sido registrado por favor vuelve a intentarlo");
-            }
+            foreach(string f in )
+        
         }
 
         private void button1_Click(object sender, EventArgs e)
