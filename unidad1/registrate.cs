@@ -54,7 +54,7 @@ namespace unidad1
         }
         private void Guardar_Usuarios_Click(object sender, EventArgs e)
         {
-            almacenamiento_de_usuarios usuarios_registro = new almacenamiento_de_usuarios();
+            
 
             string nombre = Nombre.Text;
             string apellido = Apellido.Text;
@@ -67,7 +67,9 @@ namespace unidad1
 
             if (contraseña == confirmar)
             {
-                usuarios_registro.usuarios_data_table(nombre, apellido, correo_, nombre_de_usuario, contraseña);
+                almacenamiento_de_usuarios.creacion_de_filas();
+                almacenamiento_de_usuarios.usuarios_data_table(nombre, apellido, correo_, nombre_de_usuario, contraseña);
+                this.Hide();
             }
             else
             {
@@ -86,6 +88,7 @@ namespace unidad1
             Form1 inciar_seccion = new Form1();
             this.Hide();
             inciar_seccion.Show();
+
 
         }
     }

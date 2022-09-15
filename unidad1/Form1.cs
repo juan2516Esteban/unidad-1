@@ -13,12 +13,11 @@ namespace unidad1
 {
     public partial class Form1 : Form
     {
-       almacenamiento_de_usuarios usuarios_validacion = new almacenamiento_de_usuarios();
         public Form1()
         {
             InitializeComponent();
         }
-
+      
         private void Form1_Load(object sender, EventArgs e)
         {
             button1.Enabled = false;
@@ -39,18 +38,14 @@ namespace unidad1
             var comprobacion2 = !String.IsNullOrEmpty(Password.Text)&&!String.IsNullOrEmpty(Nombre.Text);
             button1.Enabled = comprobacion2;
         }
-        public static void usuario(string x, string y)
-        {
-            foreach(string f in )
-        
-        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
+           
             String nom = Nombre.Text;
             string pass = Password.Text;
-            usuario(nom, pass);
-            this.Hide();
+            almacenamiento_de_usuarios.comparación(nom,pass);
         }
 
         private void Password_TextChanged(object sender, EventArgs e)
