@@ -42,10 +42,12 @@ namespace unidad1
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+
             String nom = Nombre.Text;
             string pass = Password.Text;
-            almacenamiento_de_usuarios.comparación(nom,pass);
+            almacenamiento_de_usuarios.comparación(nom, pass);
+            this.Hide();
+            
         }
 
         private void Password_TextChanged(object sender, EventArgs e)

@@ -58,8 +58,9 @@ namespace unidad1
             }
             if (validacion)
             {
-                MessageBox.Show("hola ingresaste");
-
+                juego Juego = new juego();
+                MessageBox.Show("su usuario fue encontrado, ya puedes iniciar a jugar");
+                Juego.Show();
             }
             else
             {
@@ -70,4 +71,6 @@ namespace unidad1
         }
 
     }
-}
+   
+    }
+
