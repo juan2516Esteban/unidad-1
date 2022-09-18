@@ -38,6 +38,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Dinero = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panel1
@@ -51,7 +53,7 @@
             // preguntas
             // 
             this.preguntas.AutoSize = true;
-            this.preguntas.Location = new System.Drawing.Point(222, 278);
+            this.preguntas.Location = new System.Drawing.Point(6, 262);
             this.preguntas.Name = "preguntas";
             this.preguntas.Size = new System.Drawing.Size(35, 13);
             this.preguntas.TabIndex = 1;
@@ -134,11 +136,32 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Opción D";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(497, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Dinero Actual";
+            // 
+            // Dinero
+            // 
+            this.Dinero.AutoSize = true;
+            this.Dinero.Location = new System.Drawing.Point(497, 47);
+            this.Dinero.Name = "Dinero";
+            this.Dinero.Size = new System.Drawing.Size(35, 13);
+            this.Dinero.TabIndex = 11;
+            this.Dinero.Text = "label6";
+            this.Dinero.Click += new System.EventHandler(this.Dinero_Click);
+            // 
             // juego
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(678, 427);
+            this.Controls.Add(this.Dinero);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -169,5 +192,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label Dinero;
     }
 }

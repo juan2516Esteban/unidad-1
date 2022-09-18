@@ -60,7 +60,7 @@ namespace unidad1
             {
                 juego Juego = new juego();
                 MessageBox.Show("su usuario fue encontrado, ya puedes iniciar a jugar");
-                Juego.Show();
+                Juego.Show(); 
             }
             else
             {
