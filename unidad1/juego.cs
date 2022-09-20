@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,6 +28,11 @@ namespace unidad1
         bool precionar_C = false;
         bool precionar_D = false;
 
+        bool ColorA = false;
+        bool ColorB = false;
+        bool ColorC = false;
+        bool ColorD = false;
+
         bool solo_crear_una_vez = true;
         double monto_dinero = 0;
         int sub_indice=0;
@@ -45,7 +51,18 @@ namespace unidad1
             buttonC.Enabled = true;
             buttonD.Enabled = true;
 
+            buttonA.BackColor = Color.White;
+            buttonB.BackColor = Color.White;
+            buttonC.BackColor = Color.White;
+            buttonD.BackColor = Color.White;
+
+            ColorA = false;
+            ColorB = false;
+            ColorC = false;
+            ColorD = false;
+
         }
+
 
         protected void guardar_preguntas()
         {
@@ -55,6 +72,12 @@ namespace unidad1
             }
             preguntas_info.Rows.Add(new object[] { "Si un día decidieras sembrar semillas de Quercus robur. ¿Qué crecería?" });
             preguntas_info.Rows.Add(new object[] { "¿Los neurólogos creen que la corteza prefrontal del cerebro se activa cuando haces qué?" });
+            preguntas_info.Rows.Add(new object[] { "¿Quién fue el primero en recibir un premio Nobel de Literatura?" });
+            preguntas_info.Rows.Add(new object[] { "¿Con qué letra comienza la palabra del tomo 21 de la Enciclopedia Espasa?" });
+            preguntas_info.Rows.Add(new object[] { "¿Qué elemento químico fue nombrado en honor a un malvado duende del subsuelo?" });
+            preguntas_info.Rows.Add(new object[] { "¿Cuántos mares rodean la península de los Balcanes?" });
+            preguntas_info.Rows.Add(new object[] { "¿Cual es el valor equivalente de 2^3?" });
+
         }
         protected void guardar_opciones_A()
         {
@@ -64,6 +87,12 @@ namespace unidad1
             }
             opcion_A.Rows.Add(new object[] { "¿Un Árbol?" });
             opcion_A.Rows.Add(new object[] { "Tienes un ataque de pánico" });
+            opcion_A.Rows.Add(new object[] { "Novelista" });
+            opcion_A.Rows.Add(new object[] { "E" });
+            opcion_A.Rows.Add(new object[] { "Hafnio" });
+            opcion_A.Rows.Add(new object[] { "3" });
+            opcion_A.Rows.Add(new object[] { "6" });
+
 
         }
         protected void guardar_opciones_B()
@@ -74,6 +103,12 @@ namespace unidad1
             }
             opcion_B.Rows.Add(new object[] { "¿Flores?" });
             opcion_B.Rows.Add(new object[] { "Recuerdas un nombre" });
+            opcion_B.Rows.Add(new object[] { "Dramaturgo" });
+            opcion_B.Rows.Add(new object[] { "F" });
+            opcion_B.Rows.Add(new object[] { "Cobalto" });
+            opcion_B.Rows.Add(new object[] { "4" });
+            opcion_B.Rows.Add(new object[] { "16" });
+
         }
 
         protected void guardar_opciones_C()
@@ -85,6 +120,11 @@ namespace unidad1
 
             opcion_C.Rows.Add(new object[] { "¿Verduras?" });
             opcion_C.Rows.Add(new object[] { "Entiendes una broma" });
+            opcion_C.Rows.Add(new object[] { "Poeta" });
+            opcion_C.Rows.Add(new object[] { "G" });
+            opcion_C.Rows.Add(new object[] { "Berilio" });
+            opcion_C.Rows.Add(new object[] { "5" });
+            opcion_C.Rows.Add(new object[] { "4" });
         }
 
         protected void guardar_opciones_D()
@@ -96,6 +136,12 @@ namespace unidad1
 
             opcion_D.Rows.Add(new object[] { "¿Granos?" });
             opcion_D.Rows.Add(new object[] { "Escuchas música" });
+            opcion_D.Rows.Add(new object[] { "Ensayista" });
+            opcion_D.Rows.Add(new object[] { "H" });
+            opcion_D.Rows.Add(new object[] { "Telurio" });
+            opcion_D.Rows.Add(new object[] { "6" });
+            opcion_D.Rows.Add(new object[] { "8" });
+
         }
 
         protected void comprobacion()
@@ -129,14 +175,49 @@ namespace unidad1
             sub_indice++;
             otra_interfaz();
         }
+
+        private void cambiar_color()
+        {
+            if (ColorA == true)
+            {
+                buttonA.BackColor = Color.FromArgb(11,212,84);
+                buttonB.BackColor = Color.FromArgb(245, 112, 76);
+                buttonC.BackColor = Color.FromArgb(245, 112, 76);
+                buttonD.BackColor = Color.FromArgb(245, 112, 76);
+            }
+            else if(ColorB == true)
+            {
+                buttonA.BackColor = Color.FromArgb(245, 112, 76);
+                buttonB.BackColor = Color.FromArgb(11,212,84);
+                buttonC.BackColor = Color.FromArgb(245, 112, 76);
+                buttonD.BackColor = Color.FromArgb(245, 112, 76);
+            }
+            else if(ColorC == true)
+            {
+                buttonA.BackColor = Color.FromArgb(245, 112, 76);
+                buttonB.BackColor = Color.FromArgb(245, 112, 76);
+                buttonC.BackColor = Color.FromArgb(11,212,84);
+                buttonD.BackColor = Color.FromArgb(245, 112, 76);
+            }
+            else if(ColorD == true)
+            {
+                buttonA.BackColor = Color.FromArgb(245, 112, 76);
+                buttonB.BackColor = Color.FromArgb(245, 112, 76);
+                buttonC.BackColor = Color.FromArgb(245,112,76);
+                buttonD.BackColor = Color.FromArgb(11,212,84);
+            }
+              
+         }
         
         protected void opcion_A_correcta()
         {
                 if (precionar_A == true)
                 {
+                    ColorA = true;
                     monto_dinero += 500000;
                     Dinero.Text = monto_dinero.ToString();
-                MessageBox.Show("la respuesta A es la correcta ganaste 500,000 pesos !!!");
+                    cambiar_color();
+                    MessageBox.Show("la respuesta A es la correcta ganaste 500,000 pesos !!!");
 
                  cambiar_interface();
 
@@ -146,8 +227,10 @@ namespace unidad1
                 {
                     if (monto_dinero > 0)
                     {
+                        ColorA = true;
                         monto_dinero -= 250000;
                         Dinero.Text = monto_dinero.ToString();
+                        cambiar_color();
                         MessageBox.Show("Lo sentimos la respuesta correcta es la A");
 
                         cambiar_interface();
@@ -155,6 +238,8 @@ namespace unidad1
 
                 else
                 {
+                    ColorA=true;
+                    cambiar_color();
                     MessageBox.Show("Lo sentimos la respuesta correcta es la A , como tu valor actual de dinero es 0 no se te descontara nada");
 
                     cambiar_interface();
@@ -168,8 +253,10 @@ namespace unidad1
 
             if (precionar_B == true)
             {
+                ColorB = true;
                 monto_dinero += 500000;
                 Dinero.Text = monto_dinero.ToString();
+                cambiar_color();
                 MessageBox.Show("la respuesta B es la correcta ganaste 500,000 pesos !!!");
 
                 cambiar_interface();
@@ -180,8 +267,10 @@ namespace unidad1
             {
                 if (monto_dinero > 0)
                 {
+                    ColorB = true;
                     monto_dinero -= 250000;
                     Dinero.Text = monto_dinero.ToString();
+                    cambiar_color();
                     MessageBox.Show("Lo sentimos la respuesta correcta es la B");
 
                     cambiar_interface();
@@ -189,7 +278,89 @@ namespace unidad1
 
                 else
                 {
+                    ColorB = true;
+                    cambiar_color();
                     MessageBox.Show("Lo sentimos la respuesta correcta es la B , como tu valor actual de dinero es 0 no se te descontara nada");
+
+                    cambiar_interface();
+                }
+
+            }
+        }
+
+        protected void opcion_C_correcta()
+        {
+
+            if (precionar_C == true)
+            {
+                ColorC = true;
+                monto_dinero += 500000;
+                Dinero.Text = monto_dinero.ToString();
+                cambiar_color();
+                MessageBox.Show("la respuesta C es la correcta ganaste 500,000 pesos !!!");
+
+                cambiar_interface();
+
+            }
+
+            else
+            {
+                if (monto_dinero > 0)
+                {
+                    ColorC = true;
+                    monto_dinero -= 250000;
+                    Dinero.Text = monto_dinero.ToString();
+                    cambiar_color();
+                    MessageBox.Show("Lo sentimos la respuesta correcta es la C");
+
+                    cambiar_interface();
+                }
+
+                else
+                {
+                    ColorC = true;
+                    cambiar_color();
+                    MessageBox.Show("Lo sentimos la respuesta correcta es la C , como tu valor actual de dinero es 0 no se te descontara nada");
+
+                    cambiar_interface();
+                }
+
+            }
+        }
+
+        protected void opcion_D_correcta()
+        {
+
+            if (precionar_D == true)
+            {
+                ColorD = true;
+                monto_dinero += 500000;
+                Dinero.Text = monto_dinero.ToString();
+                cambiar_color();
+                MessageBox.Show("la respuesta D es la correcta ganaste 500,000 pesos !!!");
+
+                cambiar_interface();
+
+            }
+
+            else
+            {
+                if (monto_dinero > 0)
+                {
+                    ColorD = true;
+                    monto_dinero -= 250000;
+                    Dinero.Text = monto_dinero.ToString();
+                    cambiar_color();
+                    MessageBox.Show("Lo sentimos la respuesta correcta es la D");
+
+                    cambiar_interface();
+                }
+
+                else
+                {
+                    ColorD = true;
+                    cambiar_color();
+                    MessageBox.Show("Lo sentimos la respuesta correcta es la D , como tu valor actual de dinero es 0 no se te descontara nada");
 
                     cambiar_interface();
                 }
@@ -206,8 +377,34 @@ namespace unidad1
             }
             else if(sub_indice == 2)
             {
+                opcion_C_correcta();
+            }
+            else if(sub_indice == 3)
+            {
+                opcion_C_correcta();
+            }
+            else if(sub_indice == 4)
+            {
+                opcion_A_correcta();
+            }
+            else if(sub_indice == 5)
+            {
                 opcion_B_correcta();
             }
+            else if (sub_indice == 6) { 
+                opcion_D_correcta();
+            }
+            else if (sub_indice == 7)
+            {
+                opcion_D_correcta();
+                MessageBox.Show("Felicitaciones has terminado el juego, acabas de llebarte la suma total de: " + monto_dinero);
+
+                this.Hide();
+            }
+
+
+
+            
 
         }
 
@@ -251,6 +448,19 @@ namespace unidad1
         }
 
         private void Dinero_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            panel2.BackColor = Color.FromArgb(62, 63, 214);
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
         {
         }
     }
