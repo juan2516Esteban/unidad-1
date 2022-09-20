@@ -139,5 +139,15 @@ namespace unidad1.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap velocidad_logo_icon_design_del_dinero_127653477 {
+            get {
+                object obj = ResourceManager.GetObject("velocidad-logo-icon-design-del-dinero-127653477", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

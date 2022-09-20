@@ -138,5 +138,8 @@
   <ItemGroup>
     <None Include="Resources\interfaz.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\velocidad-logo-icon-design-del-dinero-127653477.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

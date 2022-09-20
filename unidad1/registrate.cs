@@ -22,6 +22,8 @@ namespace unidad1
         private void registrate_Load(object sender, EventArgs e)
         {
             Guardar_Usuarios.Enabled = false;
+            Guardar_Usuarios.BackColor = Color.FromArgb(242, 239, 180);
+            panel2.BackColor = Color.FromArgb(127 , 213 , 227);
         }
 
         private void Nombre_TextChanged(object sender, EventArgs e)
@@ -92,7 +94,7 @@ namespace unidad1
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            Guardar_Usuarios.BackColor = Color.FromArgb(242, 239, 180);
+
         }
     }
 }
