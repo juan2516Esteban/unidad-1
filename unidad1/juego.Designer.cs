@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
             this.preguntas = new System.Windows.Forms.Label();
             this.buttonA = new System.Windows.Forms.Button();
             this.buttonB = new System.Windows.Forms.Button();
@@ -43,17 +42,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.AutoSize = true;
-            this.panel1.BackgroundImage = global::unidad1.Properties.Resources.juego;
-            this.panel1.Location = new System.Drawing.Point(-5, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(824, 248);
-            this.panel1.TabIndex = 0;
             // 
             // preguntas
             // 
@@ -156,7 +147,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Arial", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(714, 120);
+            this.label5.Location = new System.Drawing.Point(727, 109);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 13);
             this.label5.TabIndex = 10;
@@ -167,7 +158,7 @@
             this.Dinero.AutoSize = true;
             this.Dinero.BackColor = System.Drawing.Color.Transparent;
             this.Dinero.Font = new System.Drawing.Font("Arial", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dinero.Location = new System.Drawing.Point(714, 145);
+            this.Dinero.Location = new System.Drawing.Point(727, 134);
             this.Dinero.Name = "Dinero";
             this.Dinero.Size = new System.Drawing.Size(41, 13);
             this.Dinero.TabIndex = 11;
@@ -212,6 +203,16 @@
             this.panel2.Size = new System.Drawing.Size(821, 182);
             this.panel2.TabIndex = 14;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // panel1
+            // 
+            this.panel1.AutoSize = true;
+            this.panel1.BackgroundImage = global::unidad1.Properties.Resources.juego;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(-5, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(824, 248);
+            this.panel1.TabIndex = 0;
             // 
             // juego
             // 

@@ -54,8 +54,7 @@ namespace unidad1
         }
         private void Guardar_Usuarios_Click(object sender, EventArgs e)
         {
-            
-
+            panel2.BackColor = Color.FromArgb(86, 163, 240);
             string nombre = Nombre.Text;
             string apellido = Apellido.Text;
             string correo_ = Correo.Text;
@@ -90,6 +89,11 @@ namespace unidad1
             inciar_seccion.Show();
 
 
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            Guardar_Usuarios.BackColor = Color.FromArgb(242, 239, 180);
         }
     }
 }
