@@ -35,16 +35,15 @@ namespace unidad1
 
         bool solo_crear_una_vez = true;
         double monto_dinero = 0;
-        int sub_indice=0;
-       
+        int sub_indice = 0;
         protected void Otra_interfaz()
         {
             solo_crear_una_vez = false;
 
-             precionar_A = false;
-             precionar_B = false;
-             precionar_C = false;
-             precionar_D = false;
+            precionar_A = false;
+            precionar_B = false;
+            precionar_C = false;
+            precionar_D = false;
 
             buttonA.Enabled = true;
             buttonB.Enabled = true;
@@ -146,7 +145,7 @@ namespace unidad1
 
         protected void Comprobacion()
         {
-            if (precionar_A == true || precionar_B==true || precionar_C==true || precionar_D == true)
+            if (precionar_A == true || precionar_B == true || precionar_C == true || precionar_D == true)
             {
                 buttonA.Enabled = false;
                 buttonB.Enabled = false;
@@ -180,72 +179,72 @@ namespace unidad1
         {
             if (ColorA == true)
             {
-                buttonA.BackColor = Color.FromArgb(11,212,84);
+                buttonA.BackColor = Color.FromArgb(11, 212, 84);
                 buttonB.BackColor = Color.FromArgb(245, 112, 76);
                 buttonC.BackColor = Color.FromArgb(245, 112, 76);
                 buttonD.BackColor = Color.FromArgb(245, 112, 76);
             }
-            else if(ColorB == true)
+            else if (ColorB == true)
             {
                 buttonA.BackColor = Color.FromArgb(245, 112, 76);
-                buttonB.BackColor = Color.FromArgb(11,212,84);
+                buttonB.BackColor = Color.FromArgb(11, 212, 84);
                 buttonC.BackColor = Color.FromArgb(245, 112, 76);
                 buttonD.BackColor = Color.FromArgb(245, 112, 76);
             }
-            else if(ColorC == true)
+            else if (ColorC == true)
             {
                 buttonA.BackColor = Color.FromArgb(245, 112, 76);
                 buttonB.BackColor = Color.FromArgb(245, 112, 76);
-                buttonC.BackColor = Color.FromArgb(11,212,84);
+                buttonC.BackColor = Color.FromArgb(11, 212, 84);
                 buttonD.BackColor = Color.FromArgb(245, 112, 76);
             }
-            else if(ColorD == true)
+            else if (ColorD == true)
             {
                 buttonA.BackColor = Color.FromArgb(245, 112, 76);
                 buttonB.BackColor = Color.FromArgb(245, 112, 76);
-                buttonC.BackColor = Color.FromArgb(245,112,76);
-                buttonD.BackColor = Color.FromArgb(11,212,84);
+                buttonC.BackColor = Color.FromArgb(245, 112, 76);
+                buttonD.BackColor = Color.FromArgb(11, 212, 84);
             }
-              
-         }
-        
+
+        }
+
         protected void Opcion_A_correcta()
         {
-                if (precionar_A == true)
+            if (precionar_A == true)
+            {
+                ColorA = true;
+                monto_dinero += 500000;
+                Dinero.Text = monto_dinero.ToString();
+                Cambiar_color();
+                MessageBox.Show("la respuesta A es la correcta ganaste 500,000 pesos !!!");
+
+                Cambiar_interface();
+
+            }
+
+            else
+            {
+                if (monto_dinero > 0)
                 {
                     ColorA = true;
-                    monto_dinero += 500000;
+                    monto_dinero -= 250000;
                     Dinero.Text = monto_dinero.ToString();
                     Cambiar_color();
-                    MessageBox.Show("la respuesta A es la correcta ganaste 500,000 pesos !!!");
+                    MessageBox.Show("Lo sentimos la respuesta correcta es la A");
 
-                 Cambiar_interface();
-
+                    Cambiar_interface();
                 }
 
                 else
                 {
-                    if (monto_dinero > 0)
-                    {
-                        ColorA = true;
-                        monto_dinero -= 250000;
-                        Dinero.Text = monto_dinero.ToString();
-                        Cambiar_color();
-                        MessageBox.Show("Lo sentimos la respuesta correcta es la A");
-
-                        Cambiar_interface();
-                }
-
-                else
-                {
-                    ColorA=true;
+                    ColorA = true;
                     Cambiar_color();
                     MessageBox.Show("Lo sentimos la respuesta correcta es la A , como tu valor actual de dinero es 0 no se te descontara nada");
 
                     Cambiar_interface();
                 }
 
-                }
+            }
         }
 
         protected void Opcion_B_correcta()
@@ -375,28 +374,30 @@ namespace unidad1
             {
                 Opcion_A_correcta();
             }
-            else if(sub_indice == 2)
+            else if (sub_indice == 2)
             {
                 Opcion_C_correcta();
             }
-            else if(sub_indice == 3)
+            else if (sub_indice == 3)
             {
                 Opcion_C_correcta();
             }
-            else if(sub_indice == 4)
+            else if (sub_indice == 4)
             {
                 Opcion_A_correcta();
             }
-            else if(sub_indice == 5)
+            else if (sub_indice == 5)
             {
                 Opcion_B_correcta();
             }
-            else if (sub_indice == 6) { 
+            else if (sub_indice == 6)
+            {
                 Opcion_D_correcta();
             }
             else if (sub_indice == 7)
             {
                 Opcion_D_correcta();
+
                 MessageBox.Show("Felicitaciones has terminado el juego, acabas de llebarte la suma total de: " + monto_dinero);
 
                 this.Hide();
@@ -404,19 +405,19 @@ namespace unidad1
 
 
 
-            
+
 
         }
 
         private void juego_Load(object sender, EventArgs e)
-        { 
+        {
             Cambiar_interface();
             Dinero.Text = monto_dinero.ToString();
         }
 
         private void preguntas_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void buttonA_Click(object sender, EventArgs e)
@@ -466,6 +467,127 @@ namespace unidad1
 
         private void panel3_Paint_1(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void Cincuenta_Cincuenta_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Acabas de utilizar el 50/50 aprobechalo ya que solo lo podras utilizar una vez !!!");
+
+            if (sub_indice == 1 || sub_indice == 4)
+            {
+                CincuentaA();
+            }
+            else if (sub_indice == 5)
+            {
+                CincuentaB();
+            }
+            else if (sub_indice==2 || sub_indice == 3)
+            {
+                CincuentaC();
+            }
+            else if (sub_indice == 6 || sub_indice == 7)
+            {
+                CincuentaD();
+            }
+
+            Cincuenta_Cincuenta.Enabled = false;
+        }
+
+        protected void CincuentaA()
+        {
+                Random rd = new Random();
+                int rd1=rd.Next(0,2);
+
+                if(rd1 == 0)
+            {
+                buttonB.Enabled= false;
+                buttonD.Enabled= false;
+            }
+               else if (rd1 == 1)
+            {
+                buttonC.Enabled=false;
+                buttonD.Enabled=false;
+            }
+                else if(rd1 == 2)
+            {
+                buttonC.Enabled= false;
+                buttonB.Enabled= false;
+            }
+           
+            
+        }
+
+        protected void CincuentaB()
+        {
+            Random rd = new Random();
+            int rd1 = rd.Next(0, 2);
+
+            if (rd1 == 0)
+            {
+                buttonA.Enabled = false;
+                buttonD.Enabled = false;
+            }
+            else if (rd1 == 1)
+            {
+                buttonC.Enabled = false;
+                buttonD.Enabled = false;
+            }
+            else if (rd1 == 2)
+            {
+                buttonC.Enabled = false;
+                buttonA.Enabled = false;
+            }
+            
+
+
+        }
+
+        protected void CincuentaC()
+        {
+            Random rd = new Random();
+            int rd1 = rd.Next(0, 2);
+
+            if (rd1 == 0)
+            {
+                buttonA.Enabled = false;
+                buttonD.Enabled = false;
+            }
+            else if (rd1 == 1)
+            {
+                buttonB.Enabled = false;
+                buttonD.Enabled = false;
+            }
+            else if (rd1 == 2)
+            {
+                buttonB.Enabled = false;
+                buttonA.Enabled = false;
+            }
+
+
+        }
+
+        protected void CincuentaD()
+        {
+            Random rd = new Random();
+            int rd1 = rd.Next(0, 2);
+
+            if (rd1 == 0)
+            {
+                buttonA.Enabled = false;
+                buttonC.Enabled = false;
+            }
+            else if (rd1 == 1)
+            {
+                buttonB.Enabled = false;
+                buttonC.Enabled = false;
+            }
+            else if (rd1 == 2)
+            {
+                buttonB.Enabled = false;
+                buttonA.Enabled = false;
+            }
+
 
         }
     }

@@ -42,10 +42,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Cincuenta_Cincuenta = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -209,6 +212,24 @@
             this.panel2.TabIndex = 14;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // panel5
+            // 
+            this.panel5.BackgroundImage = global::unidad1.Properties.Resources.logo;
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel5.Location = new System.Drawing.Point(500, 87);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(97, 78);
+            this.panel5.TabIndex = 16;
+            // 
+            // panel4
+            // 
+            this.panel4.BackgroundImage = global::unidad1.Properties.Resources.velocidad_logo_icon_design_del_dinero_127653477;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.Location = new System.Drawing.Point(639, 109);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(71, 56);
+            this.panel4.TabIndex = 15;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
@@ -227,32 +248,45 @@
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Location = new System.Drawing.Point(-5, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(824, 248);
+            this.panel1.Size = new System.Drawing.Size(636, 248);
             this.panel1.TabIndex = 0;
             // 
-            // panel4
+            // label8
             // 
-            this.panel4.BackgroundImage = global::unidad1.Properties.Resources.velocidad_logo_icon_design_del_dinero_127653477;
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Location = new System.Drawing.Point(639, 109);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(71, 56);
-            this.panel4.TabIndex = 15;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(649, 27);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "label8";
             // 
-            // panel5
+            // Cincuenta_Cincuenta
             // 
-            this.panel5.BackgroundImage = global::unidad1.Properties.Resources.logo;
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Location = new System.Drawing.Point(500, 87);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(97, 78);
-            this.panel5.TabIndex = 16;
+            this.Cincuenta_Cincuenta.Location = new System.Drawing.Point(652, 57);
+            this.Cincuenta_Cincuenta.Name = "Cincuenta_Cincuenta";
+            this.Cincuenta_Cincuenta.Size = new System.Drawing.Size(48, 39);
+            this.Cincuenta_Cincuenta.TabIndex = 16;
+            this.Cincuenta_Cincuenta.Text = "button1";
+            this.Cincuenta_Cincuenta.UseVisualStyleBackColor = true;
+            this.Cincuenta_Cincuenta.Click += new System.EventHandler(this.Cincuenta_Cincuenta_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(652, 121);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(48, 39);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // juego
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(820, 427);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Cincuenta_Cincuenta);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.buttonD);
             this.Controls.Add(this.buttonC);
             this.Controls.Add(this.buttonB);
@@ -291,5 +325,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button Cincuenta_Cincuenta;
+        private System.Windows.Forms.Button button2;
     }
 }
