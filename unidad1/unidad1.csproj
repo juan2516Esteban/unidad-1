@@ -147,5 +147,8 @@
   <ItemGroup>
     <None Include="Resources\comodin1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question-bubbles-line-icon-ask-help-sign-faq-questionnaire-symbol-quality-design-element-line-style-question-bubbles-icon-editable-stroke-free-vector.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

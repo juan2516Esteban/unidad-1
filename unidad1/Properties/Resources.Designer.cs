@@ -153,6 +153,17 @@ namespace unidad1.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap question_bubbles_line_icon_ask_help_sign_faq_questionnaire_symbol_quality_design_element_line_style_question_bubbles_icon_editable_stroke_free_vector {
+            get {
+                object obj = ResourceManager.GetObject("question-bubbles-line-icon-ask-help-sign-faq-questionnaire-symbol-quality-design-" +
+                        "element-line-style-question-bubbles-icon-editable-stroke-free-vector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap terminar {
             get {
                 object obj = ResourceManager.GetObject("terminar", resourceCulture);

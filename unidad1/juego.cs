@@ -36,6 +36,7 @@ namespace unidad1
         bool solo_crear_una_vez = true;
         double monto_dinero = 0;
         int sub_indice = 0;
+        int comodin = 2;
         protected void Otra_interfaz()
         {
             solo_crear_una_vez = false;
@@ -374,6 +375,12 @@ namespace unidad1
             {
                 Opcion_A_correcta();
             }
+            else if (comodin == 3)
+            {
+                comodin += 1;
+                Opcion_A_correcta();
+                Otra_interfaz();
+            }
             else if (sub_indice == 2)
             {
                 Opcion_C_correcta();
@@ -402,11 +409,6 @@ namespace unidad1
 
                 this.Hide();
             }
-
-
-
-
-
         }
 
         private void juego_Load(object sender, EventArgs e)
@@ -589,6 +591,20 @@ namespace unidad1
             }
 
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Acabas de escoger cambio de pregunta, esto te dara otra oportunidad aprovechala!!!");
+            preguntas.Text = "¿Qué palabra aparece tradicionalmente en la pantalla al terminar un largometraje?";
+            buttonA.Text= "Fin";
+            buttonB.Text = "Conclucion";
+            buttonC.Text = "Final";
+            buttonD.Text = "acabo";
+
+            comodin += 1;
+
+            button2.Enabled = false;
         }
     }
 }
