@@ -42,13 +42,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.Cincuenta_Cincuenta = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.Cincuenta_Cincuenta = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -212,6 +212,56 @@
             this.panel2.TabIndex = 14;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.Dinero);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Location = new System.Drawing.Point(639, 109);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(171, 56);
+            this.panel3.TabIndex = 14;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint_1);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(649, 18);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "label8";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(652, 121);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(48, 39);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // Cincuenta_Cincuenta
+            // 
+            this.Cincuenta_Cincuenta.BackgroundImage = global::unidad1.Properties.Resources.comodin;
+            this.Cincuenta_Cincuenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Cincuenta_Cincuenta.Location = new System.Drawing.Point(652, 43);
+            this.Cincuenta_Cincuenta.Name = "Cincuenta_Cincuenta";
+            this.Cincuenta_Cincuenta.Size = new System.Drawing.Size(74, 72);
+            this.Cincuenta_Cincuenta.TabIndex = 16;
+            this.Cincuenta_Cincuenta.UseVisualStyleBackColor = true;
+            this.Cincuenta_Cincuenta.Click += new System.EventHandler(this.Cincuenta_Cincuenta_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.AutoSize = true;
+            this.panel1.BackgroundImage = global::unidad1.Properties.Resources.juego;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(-5, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(636, 248);
+            this.panel1.TabIndex = 0;
+            // 
             // panel5
             // 
             this.panel5.BackgroundImage = global::unidad1.Properties.Resources.logo;
@@ -229,55 +279,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(71, 56);
             this.panel4.TabIndex = 15;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.Dinero);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Location = new System.Drawing.Point(639, 109);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(171, 56);
-            this.panel3.TabIndex = 14;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint_1);
-            // 
-            // panel1
-            // 
-            this.panel1.AutoSize = true;
-            this.panel1.BackgroundImage = global::unidad1.Properties.Resources.juego;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(-5, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(636, 248);
-            this.panel1.TabIndex = 0;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(649, 27);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "label8";
-            // 
-            // Cincuenta_Cincuenta
-            // 
-            this.Cincuenta_Cincuenta.Location = new System.Drawing.Point(652, 57);
-            this.Cincuenta_Cincuenta.Name = "Cincuenta_Cincuenta";
-            this.Cincuenta_Cincuenta.Size = new System.Drawing.Size(48, 39);
-            this.Cincuenta_Cincuenta.TabIndex = 16;
-            this.Cincuenta_Cincuenta.Text = "button1";
-            this.Cincuenta_Cincuenta.UseVisualStyleBackColor = true;
-            this.Cincuenta_Cincuenta.Click += new System.EventHandler(this.Cincuenta_Cincuenta_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(652, 121);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(48, 39);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // juego
             // 
