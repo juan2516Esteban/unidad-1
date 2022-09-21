@@ -595,7 +595,7 @@ namespace unidad1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Acabas de escoger cambio de pregunta, esto te dara otra oportunidad aprovechala!!!");
+            MessageBox.Show("Acabas de escoger cambio de pregunta, esto te dara otra oportunidad aprovechala, ya que solo la podras utilizar una vez !!!");
             preguntas.Text = "¿Qué palabra aparece tradicionalmente en la pantalla al terminar un largometraje?";
             buttonA.Text= "Fin";
             buttonB.Text = "Conclucion";
@@ -605,6 +605,11 @@ namespace unidad1
             comodin += 1;
 
             button2.Enabled = false;
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

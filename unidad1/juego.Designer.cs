@@ -51,8 +51,10 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // preguntas
@@ -229,7 +231,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial Black", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(649, 18);
+            this.label8.Location = new System.Drawing.Point(9, 12);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(88, 18);
             this.label8.TabIndex = 15;
@@ -289,7 +291,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(740, 72);
+            this.label9.Location = new System.Drawing.Point(119, 72);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(44, 15);
             this.label9.TabIndex = 18;
@@ -299,28 +301,38 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(713, 149);
+            this.label10.Location = new System.Drawing.Point(89, 149);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(120, 15);
             this.label10.TabIndex = 19;
             this.label10.Text = "cambio de pregunta";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel6.Controls.Add(this.label10);
+            this.panel6.Controls.Add(this.label9);
+            this.panel6.Controls.Add(this.label8);
+            this.panel6.Location = new System.Drawing.Point(624, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(217, 247);
+            this.panel6.TabIndex = 20;
             // 
             // juego
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(845, 427);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Cincuenta_Cincuenta);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.buttonD);
             this.Controls.Add(this.buttonC);
             this.Controls.Add(this.buttonB);
             this.Controls.Add(this.buttonA);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel6);
             this.Name = "juego";
             this.Text = "juego";
             this.Load += new System.EventHandler(this.juego_Load);
@@ -328,6 +340,8 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -358,5 +372,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel6;
     }
 }
